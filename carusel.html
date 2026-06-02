@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .fondo-animado {
+        width: 100vw;
+        height: 100vh;
+        /* Definimos los colores del degradado */
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        /* Hacemos el fondo más grande que la pantalla para que haya margen de movimiento */
+        background-size: 400% 400%;
+        /* Aplicamos la animación: nombre, duración, velocidad constante y repetición infinita */
+        animation: movimientoFondo 10s ease infinite;
+    }
+
+    /* Configuramos los movimientos del fondo */
+    @keyframes movimientoFondo {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+<body class="fondo-animado">
+<div class="container">
+    <center>
+        <div class="row">
+            <div class="col">
+                <img  id="imagen"  width="400px" height="200px" alt="NO CARGA LA IMAGEN">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" id="anterior">Anterior</button>
+                <button type="button" id="siguiente">Siguiente</button>
+            </div>
+        </div>
+    </center>
+</div>
+<script src="js/carusel.js"></script>
+</body>
+</html>
